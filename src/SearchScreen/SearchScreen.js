@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
 export default class SearchScreen extends Component {
-  render() {
-    return (
-      <View>
-        <Text> Search Screen </Text>
-      </View>
-    );
-  }
+    render() {
+        return (
+            <SafeAreaView style={styles.body}>
+                <View style={styles.containerBody}>
+                    <Text> Search Screen </Text>
+                </View>
+            </SafeAreaView>
+        );
+    }
 }
-   
+
+const styles = StyleSheet.create({
+    body: {
+        flex: 1,
+    },
+    containerBody: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "white"
+    }
+
+})

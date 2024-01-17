@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './HomeScreen/HomeScreen';
 import DetailsScreen from './DetailsScreen/DetailsScreen';
 import Icon from "react-native-vector-icons/Ionicons"
+import SearchScreen from './SearchScreen/SearchScreen';
 
 
 const Tab = createBottomTabNavigator();
@@ -19,6 +20,11 @@ const TabBarIcon = ({ focused, name }) => {
         iconColor = focused ? 'black' : '#AAAAAA';
     } else if (name === 'DetailsStackScreen') {
         iconName = focused ? 'Detail' : 'Detail';
+        iconSize = focused ? 19 : 14;
+        iconColor = focused ? 'black' : '#AAAAAA';
+    }
+    else if (name === 'SearchStackScreen') {
+        iconName = focused ? 'Search' : 'Search';
         iconSize = focused ? 19 : 14;
         iconColor = focused ? 'black' : '#AAAAAA';
     }
@@ -44,6 +50,7 @@ function TabBar() {
         })} >
             <Tab.Screen name="HomeStackScreen" component={HomeScreen} />
             <Tab.Screen name="DetailsStackScreen" component={DetailsScreen} />
+            <Tab.Screen name="SearchStackScreen" component={SearchScreen} />
 
         </Tab.Navigator>
     );

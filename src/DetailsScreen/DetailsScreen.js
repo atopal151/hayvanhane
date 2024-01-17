@@ -5,8 +5,8 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 export default class DetailsScreen extends Component {
   render() {
     return (
-      <SafeAreaView style={styles.container}>
-        <View style={styles.body}>
+      <SafeAreaView style={styles.body}>
+        <View style={styles.containerBody}>
         <Text>Details Screen</Text>
         </View>
       </SafeAreaView>
@@ -14,14 +14,16 @@ export default class DetailsScreen extends Component {
   }
 }
 
-const styles=StyleSheet.create({
-  container:{
-    flex:1
+
+const styles = StyleSheet.create({
+  body: {
+    flex: 1,
   },
-  body:{
-    flex:1,
-    justifyContent:"center",
-    alignItems:"center",
-    backgroundColor:"white"
+  containerBody: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "white"
   }
+
 })
