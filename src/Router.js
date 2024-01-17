@@ -4,10 +4,9 @@ import { Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from './HomeScreen/HomeScreen';
-import DetailsScreen from './DetailsScreen/DetailsScreen';
-import Icon from "react-native-vector-icons/Ionicons"
-import SearchScreen from './SearchScreen/SearchScreen';
+import HomeScreen from './HomePage/HomeScreen';
+import DetailsScreen from './DetailsPage/DetailsScreen';
+import SearchScreen from './SearchPage/SearchScreen';
 
 
 const Tab = createBottomTabNavigator();
@@ -17,18 +16,23 @@ const TabBarIcon = ({ focused, name }) => {
     if (name === 'HomeStackScreen') {
         iconName = focused ? 'Home' : 'Home';
         iconSize = focused ? 19 : 14;
-        iconColor = focused ? 'black' : '#AAAAAA';
+
+        iconFont = focused ? "800" : "300";
+        iconColor = focused ? '#60a3bc' : '#AAAAAA';
     } else if (name === 'DetailsStackScreen') {
         iconName = focused ? 'Detail' : 'Detail';
         iconSize = focused ? 19 : 14;
-        iconColor = focused ? 'black' : '#AAAAAA';
+
+        iconFont = focused ? "800" : "300";
+        iconColor = focused ? '#60a3bc' : '#AAAAAA';
     }
     else if (name === 'SearchStackScreen') {
         iconName = focused ? 'Search' : 'Search';
         iconSize = focused ? 19 : 14;
-        iconColor = focused ? 'black' : '#AAAAAA';
+        iconFont = focused ? "800" : "300";
+        iconColor = focused ? '#60a3bc' : '#AAAAAA';
     }
-    return  <Text style={{fontSize:iconSize, color:iconColor }}> {iconName}</Text>
+    return <Text style={{ fontSize: iconSize, color: iconColor,fontWeight:iconFont }}> {iconName}</Text>
 
 };
 
