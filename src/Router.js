@@ -32,7 +32,7 @@ const TabBarIcon = ({ focused, name }) => {
         iconFont = focused ? "800" : "300";
         iconColor = focused ? '#60a3bc' : '#AAAAAA';
     }
-    return <Text style={{ fontSize: iconSize, color: iconColor,fontWeight:iconFont }}> {iconName}</Text>
+    return <Text style={{ fontSize: iconSize, color: iconColor,fontWeight:iconFont, }}> {iconName}</Text>
 
 };
 
